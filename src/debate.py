@@ -10,6 +10,7 @@ Provide:
 2. The values that most influenced your judgment
 3. A brief explanation of your reasoning
 
+Do not mention the name of the cultural perspective or region in your response.
 Explain your answer in less than four sentences.
 
 Scenario:
@@ -29,7 +30,7 @@ Agent Opinion 2:
 
 Consider these agents’ opinions to provide an updated response to the question. 
 
-Briefly explain your reasoning, then state your final judgment clearly. 
+Briefly explain your reasoning while limiting your response to less than 4 sentences, then state your final judgment clearly. 
 
 Make sure to state your final answer in curly brackets at the very end of your response, using exactly one of the following formats:
 

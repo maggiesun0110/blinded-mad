@@ -25,18 +25,19 @@ A student openly disagrees with a teacher during class discussion.
 
 round1_results = round1(agent1, agent2, scenario)
 
-agent1_round2 = round2_blinded(agent1, scenario, round1_results["agent1"], round1_results["agent2"])
-agent2_round2 = round2_blinded(agent2, scenario, round1_results["agent1"], round1_results["agent2"])
+#ROUND2 BLINDED TEST
+# agent1_round2 = round2_blinded(agent1, scenario, round1_results["agent1"], round1_results["agent2"])
+# agent2_round2 = round2_blinded(agent2, scenario, round1_results["agent1"], round1_results["agent2"])
 
-print("AGENT 1 BLINDED")
-print(agent1_round2)
-print("AGENT 2 BLINDED")
-print(agent2_round2)
+# print("AGENT 1 BLINDED")
+# print(agent1_round2)
+# print("AGENT 2 BLINDED")
+# print(agent2_round2)
 
-# print("AGENT 1")
+print("AGENT 1")
 
-# print(round1_results["agent1"])
+print(round1_results["agent1"])
 
-# print("\nAGENT 2")
+print("\nAGENT 2")
 
-# print(round1_results["agent2"])
+print(round1_results["agent2"])
