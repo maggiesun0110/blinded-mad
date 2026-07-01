@@ -78,7 +78,6 @@ def round1(agent1: Agent, agent2: Agent, scenario: str):
 def round2_blinded(agent, scenario, persona1, opinion1, persona2, opinion2):
 
     opinions = randomize_opinions(persona1, opinion1, persona2, opinion2)
-    print("ORDER:", opinions[0][0], "then", opinions[1][0])
 
     prompt = ROUND2_BLINDED_PROMPT.format(
         scenario=scenario,
@@ -91,7 +90,6 @@ def round2_blinded(agent, scenario, persona1, opinion1, persona2, opinion2):
 def round2_unblinded(agent, scenario, persona1, opinion1, persona2, opinion2):
 
     opinions = randomize_opinions(persona1, opinion1, persona2, opinion2)
-    print("ORDER:", opinions[0][0], "then", opinions[1][0])
 
     prompt = ROUND2_UNBLINDED_PROMPT.format(
         scenario=scenario,
