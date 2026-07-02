@@ -37,7 +37,7 @@ def extract_judgement(response: str) -> str:
     return "UNKNOWN"
 
 def run_screening():
-    df = pd.read_csv("screening_candidates.csv")
+    df = pd.read_csv("screening_candidates_2.csv")
     results = []
 
     agents = {
@@ -98,10 +98,10 @@ Scenario:
 
         results.append(scenario_result)
 
-    with open("results/screening_results.json", "w") as f:
+    with open("results/screening_results_2.json", "w") as f:
         json.dump(results, f, indent=2)
 
-    print("Saved screening results to results/screening_results.json")
+    print("Saved screening results to results/screening_results_2.json")
 
 if __name__ == "__main__":
     run_screening()

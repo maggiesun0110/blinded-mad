@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv("data/normad_eti.csv")
+df = pd.read_csv("benchmarks/normad_etiquette_final_data.csv")
 
 already = pd.read_json("results/screening_results.json")
 already_ids = set(already["id"])
@@ -12,8 +12,8 @@ target_subaxes = [
 ]
 
 candidates = df[
-    df["subaxis"].isin(target_subaxes)
-    & ~df["id"].isin(already_ids)
+    df["Subaxis"].isin(target_subaxes)
+    & ~df["ID"].isin(already_ids)
 ]
 
 keywords = [
@@ -22,12 +22,12 @@ keywords = [
     "open", "compliment", "elder", "respect"
 ]
 
-mask = candidates["story"].str.contains("|".join(keywords), case=False, na=False) | \
-       candidates["rule-of-thumb"].str.contains("|".join(keywords), case=False, na=False)
+mask = candidates["Story"].str.contains("|".join(keywords), case=False, na=False) | \
+       candidates["Rule-of-Thumb"].str.contains("|".join(keywords), case=False, na=False)
 
 candidates = candidates[mask]
 
 batch2 = candidates.sample(n=20, random_state=43)
 
-batch2.to_csv("data/screening_candidates_2.csv", index=False)
-print(batch2[["id", "country", "subaxis", "rule-of-thumb", "story"]])
+batch2.to_csv("benchmarks/screening_candidates_2.csv", index=False)
+print(batch2[["ID", "Country", "Subaxis", "Rule-of-Thumb", "Story"]])
